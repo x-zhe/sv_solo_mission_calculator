@@ -47,6 +47,7 @@ def main():
         
         # objective
         m.Minimize(np.sum(x))
+        m.Minimize(x @ evo_coef)
         
         m.options.SOLVER=1
         m.solve(disp=False)
